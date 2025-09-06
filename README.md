@@ -28,8 +28,7 @@ A fun **Rock-Paper-Scissors** game with a graphical interface using **Tkinter**.
 **Features:**
 - Play against the computer  
 - Emoji-based choices  
-- Scoreboard and history tracking  
-- Keyboard shortcuts (R = Rock, P = Paper, S = Scissors)  
+- Scoreboard and history tracking   
 
 ### 5. Contact Manager 📞
 A simple **Contact Manager** built using **Tkinter**.  
