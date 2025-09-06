@@ -24,7 +24,7 @@ class RockPaperScissors:
         self.player_score = 0
         self.computer_score = 0
         self.rounds_played = 0
-        self.game_history = []  # last results go here
+        self.game_history = []  # all results go here
 
         # choices (kept simple)
         self.choices = {
@@ -123,7 +123,7 @@ class RockPaperScissors:
         vs = tk.Frame(arena, bg="#374151")
         vs.grid(row=0, column=0, sticky="ew", padx=10, pady=12)
 
-        # IMPORTANT: equal columns + minimum size so right label never clips
+        # equal columns + minimum size so right label never clips
         vs.columnconfigure(0, weight=1, uniform="vs", minsize=200)
         vs.columnconfigure(1, weight=1, uniform="vs", minsize=120)
         vs.columnconfigure(2, weight=1, uniform="vs", minsize=200)
@@ -250,7 +250,6 @@ class RockPaperScissors:
             self.result_label.config(text=f"{self.result_label.cget('text')}\n{extra}")
             return
 
-        # pick the right explanation based on who won
         if result == "win":
             rule = explain.get((player_choice, computer_choice), "")
             extra = random.choice(flavor["win"])
@@ -314,8 +313,9 @@ class RockPaperScissors:
         sc = tk.Scrollbar(area, command=txt.yview)
         txt.config(yscrollcommand=sc.set)
 
+        # ✅ show ALL rounds (no slice), one per line
         lines = []
-        for g in self.game_history[-10:]:
+        for g in self.game_history:
             p = self.choices[g["player"]]["emoji"]
             c = self.choices[g["computer"]]["emoji"]
             r = {"win": "🏆", "lose": "💀", "tie": "🤝"}[g["result"]]
@@ -325,6 +325,14 @@ class RockPaperScissors:
 
         txt.grid(row=0, column=0, sticky="nsew")
         sc.grid(row=0, column=1, sticky="ns")
+
+        # optional: smooth mouse-wheel scrolling when cursor is over the text
+        def _on_wheel(e):
+            txt.yview_scroll(int(-1 * (e.delta / 120)), "units")
+            return "break"
+
+        txt.bind("<Enter>", lambda e: txt.bind_all("<MouseWheel>", _on_wheel))
+        txt.bind("<Leave>", lambda e: txt.unbind_all("<MouseWheel>"))
 
     def _on_key(self, e):
         ch = e.char.lower()
@@ -351,7 +359,7 @@ class RockPaperScissors:
             "🪨 Rock crushes ✂️ Scissors\n"
             "✂️ Scissors cuts 📄 Paper\n"
             "📄 Paper covers 🪨 Rock\n\n"
-            "Good luck! 🍀"
+            "Good luck! 🍀 "
         )
         self.window.mainloop()
 
@@ -363,3 +371,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
