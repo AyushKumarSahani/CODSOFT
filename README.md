@@ -1,47 +1,97 @@
-# CODSOFT Python Internship Projects
+# 🔧 CODSOFT Python Internship Projects
 
-This repository contains my completed tasks for the CODSOFT Python Internship.
+This repository showcases the projects I completed during the CODSOFT Python Internship, demonstrating my skills in Python development and GUI design using Tkinter and Streamlit.
 
-## 📂 Projects
+## 📁 Projects Overview
 
-### 1. Calculator
-A simple calculator built using **Tkinter** in Python.  
-**Features:**
+### 1. 🧮 Calculator  
+A simple GUI-based calculator built with Tkinter.  
+**Features:**  
 - Basic arithmetic operations  
-- User-friendly interface  
+- Clean and user-friendly interface  
 
-### 2. Password Generator
-Generates strong and secure passwords.  
-**Features:**
+### 2. 🔐 Password Generator *(Streamlit App)*  
+Generates secure and randomized passwords using a web-based interface powered by Streamlit.  
+**Features:**  
 - Random password creation  
-- Mix of letters, numbers, and symbols  
+- Mix of uppercase, lowercase, digits, and symbols  
+- Interactive sliders and checkboxes for customization  
 
-### 3. To-Do List
-A to-do list application built with **Tkinter**.  
-**Features:**
+> ⚙️ **How to Run (Command Prompt):**
+
+```bash
+cd PasswordGenerator
+streamlit run password_generator.py
+```
+
+> 💡 Make sure Streamlit is installed. If not, install it using:
+
+```bash
+pip install streamlit
+```
+
+Then open the link that appears in your browser to use the app.
+
+### 3. ✅ To-Do List  
+A task management app with persistent storage.  
+**Features:**  
 - Add, edit, complete, and delete tasks  
-- Saves tasks in a JSON file  
-- Priority levels (High/Medium/Low)  
+- Save tasks in a JSON file  
+- Priority levels: High / Medium / Low  
 
-### 4. Rock Paper Scissors 🎮
-A fun **Rock-Paper-Scissors** game with a graphical interface using **Tkinter**.  
-**Features:**
-- Play against the computer  
+### 4. 🎮 Rock Paper Scissors  
+A fun game to play against the computer.  
+**Features:**  
 - Emoji-based choices  
-- Scoreboard and history tracking   
+- Scoreboard and match history  
+- Interactive GUI with Tkinter  
 
-### 5. Contact Manager 📞
-A simple **Contact Manager** built using **Tkinter**.  
-**Features:**
+### 5. 📞 Contact Manager  
+Manage your contacts with ease.  
+**Features:**  
 - Add, update, delete contacts  
 - Search functionality  
-- Export contacts to text file  
-- Data stored in JSON file  
+- Export contacts to a text file  
+- Data stored in JSON format  
 
 ---
 
-## 🚀 How to Run
+## 🚀 General Setup & Execution
 
-1. Clone the repository  
-   ```bash
-   git clone https://github.com/AyushKumarSahani/CODSOFT.git
+### 🖥️ Prerequisites  
+Ensure Python is installed:
+
+```bash
+python --version
+```
+
+If not, download it from [python.org](https://www.python.org/downloads/).
+
+### 📥 Clone the Repository
+
+```bash
+git clone https://github.com/AyushKumarSahani/CODSOFT.git
+cd CODSOFT
+```
+
+### ▶️ Run Projects via Command Prompt
+
+Navigate to the desired project folder and run the Python file:
+
+```bash
+cd ProjectFolderName
+python filename.py
+```
+
+Examples:
+- `Calculator/calculator.py`
+- `ToDoList/todo_list.py`
+- `RockPaperScissors/rps_game.py`
+- `ContactManager/contact_manager.py`
+
+For the **Password Generator**, use the Streamlit command as shown above.
+
+---
+
+## 🙌 Contributions & Feedback  
+Feel free to fork the repo, suggest improvements, or raise issues. I'm always open to feedback and collaboration!
