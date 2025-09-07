@@ -20,7 +20,7 @@ Generates secure and randomized passwords using a web-based interface powered by
 > ⚙️ **How to Run (Command Prompt):**
 
 ```bash
-cd PasswordGenerator
+cd password_generator
 streamlit run password_generator.py
 ```
 
@@ -84,10 +84,10 @@ python filename.py
 ```
 
 Examples:
-- `Calculator/calculator.py`
-- `ToDoList/todo_list.py`
-- `RockPaperScissors/rps_game.py`
-- `ContactManager/contact_manager.py`
+- `calculator/calculator.py`
+- `todo_list/todo_list.py`
+- `Rock-Paper-Scissors_Game/Rock-Paper-Scissors_Game.py`
+- `contact_book/contact_book.py`
 
 For the **Password Generator**, use the Streamlit command as shown above.
 
